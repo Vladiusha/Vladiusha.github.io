@@ -31,7 +31,7 @@ body {
 }
 
 .site_center_mobile {
-    height: 100vh;
+    height: 50vh;
     position: relative;
     margin: 0 auto;
     width: 500px;
@@ -79,10 +79,11 @@ p {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     position: absolute;
-    top: 50%;
+    /*top: 50%;*/
+    bottom: 0;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     font-size: 34px;
 }
 
@@ -117,7 +118,8 @@ p {
 }
 
 .player_wrapper_mobile {
-    top: 45%;
+    /*top: 45%;*/
+    bottom: 0;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -150,8 +152,7 @@ p {
     z-index: 5;
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
-    margin-bottom: 30px;
-
+    /*margin-bottom: 30px;*/
     height: 50vh;
     font-size: 34px;
     text-align: center;
