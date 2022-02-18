@@ -19,17 +19,21 @@ body {
 }
 
 #site_center {
-    height: 100vh;
-    position: relative;
-    margin: 0 auto;
+
 }
 
 .site_center_pc {
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
     width: 221px;
     z-index: 10;
 }
 
 .site_center_mobile {
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
     width: 500px;
     z-index: 5;
 }
@@ -57,6 +61,10 @@ p {
 }
 
 #text_donda {
+
+}
+
+.text_donda_pc {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     position: absolute;
@@ -64,30 +72,41 @@ p {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-}
-
-.text_donda_pc {
     font-size: 14px;
 }
 
 .text_donda_mobile {
-    display: none;
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     font-size: 34px;
 }
 
 #player_text {
+
+}
+
+.player_text_pc {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     text-align: center;
     margin-bottom: 3px;
-}
 
-.player_text_pc {
     font-size: 11px;
 }
 
 .player_text_mobile {
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
+    text-align: center;
+    margin-bottom: 3px;
+
     font-size: 28px;
+
 }
 
 .player_wrapper_pc {
@@ -103,9 +122,14 @@ p {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     position: absolute;
+    display: none;
 }
 
 #site_footer {
+
+}
+
+.site_footer_pc {
     width: 100vw;
     position: fixed;
     bottom: 0;
@@ -113,15 +137,21 @@ p {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     margin-bottom: 30px;
-}
 
-.site_footer_pc {
     height: 100px;
     font-size: 14px;
     margin-left: 21px;
 }
 
 .site_footer_mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
+    margin-bottom: 30px;
+
     height: 50vh;
     font-size: 34px;
     text-align: center;
@@ -145,6 +175,7 @@ p {
 
 .play_mobile {
     margin-bottom: 50px;
+    display: none;
 }
 
 .play_mobile:hover {
@@ -162,6 +193,7 @@ p {
 
 .volume_mobile {
     margin-bottom: 50px;
+    display: none;
 }
 
 .ask_pc {
@@ -170,7 +202,7 @@ p {
 }
 
 .ask_mobile {
-
+    display: none;
 }
 
 #volume_less {
@@ -212,15 +244,18 @@ p {
 }
 
 #menu {
-    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
-    color: #ABABAB;
+
 }
 
 .menu_pc {
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
     display: none;
 }
 
 .menu_mobile {
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
     font-size: 34px;
     margin-top: 45px;
     margin-left: 47px;

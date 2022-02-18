@@ -1,23 +1,23 @@
-let MENU_PC = 'menu_pc';
-let SITE_CENTER_PC = 'site_center_pc';
-let TEXT_DONDA_PC = 'text_donda_pc';
-let PLAYER_WRAPPER_PC = 'player_wrapper_pc';
-let COUNTDOWN_STYLE_PC = 'countdown_styles_pc';
-let SITE_FOOTER_PC = 'site_footer_pc';
-let PLAY_PC = 'play_pc';
-let VOLUME_PC = 'volume_pc';
-let ASK_PC = 'ask_pc';
-
-
-let MENU_MOBILE = 'menu_mobile';
-let SITE_CENTER_MOBILE = 'site_center_mobile';
-let TEXT_DONDA_MOBILE = 'text_donda_mobile';
-let PLAYER_WRAPPER_MOBILE = 'player_wrapper_mobile';
-let COUNTDOWN_STYLE_MOBILE = 'countdown_styles_mobile';
-let SITE_FOOTER_MOBILE = 'site_footer_mobile';
-let PLAY_MOBILE = 'play_mobile';
-let VOLUME_MOBILE = 'volume_mobile';
-let ASK_MOBILE = 'ask_mobile';
+// let MENU_PC = 'menu_pc';
+// let SITE_CENTER_PC = 'site_center_pc';
+// let TEXT_DONDA_PC = 'text_donda_pc';
+// let PLAYER_WRAPPER_PC = 'player_wrapper_pc';
+// let COUNTDOWN_STYLE_PC = 'countdown_styles_pc';
+// let SITE_FOOTER_PC = 'site_footer_pc';
+// let PLAY_PC = 'play_pc';
+// let VOLUME_PC = 'volume_pc';
+// let ASK_PC = 'ask_pc';
+//
+//
+// let MENU_MOBILE = 'menu_mobile';
+// let SITE_CENTER_MOBILE = 'site_center_mobile';
+// let TEXT_DONDA_MOBILE = 'text_donda_mobile';
+// let PLAYER_WRAPPER_MOBILE = 'player_wrapper_mobile';
+// let COUNTDOWN_STYLE_MOBILE = 'countdown_styles_mobile';
+// let SITE_FOOTER_MOBILE = 'site_footer_mobile';
+// let PLAY_MOBILE = 'play_mobile';
+// let VOLUME_MOBILE = 'volume_mobile';
+// let ASK_MOBILE = 'ask_mobile';
 
 
 let BRIGHTNESS_VALUE = 0;
@@ -95,7 +95,8 @@ function playButton() {
         document.getElementById('player_text'),
         document.getElementById('site_footer'),
         countdown,
-        countdown_back
+        countdown_back,
+        document.getElementById('home')
     ];
 
 
@@ -193,6 +194,7 @@ function setCSsByDevice(width) {
 
         document.getElementById('player_line').width.baseVal.value = 300;
         document.getElementById('player_line_line').x2.baseVal.value = 300;
+        document.getElementById('volume').style.display = 'none';
     } else {
         elements.forEach(element => {
             let class_name = element.className;
@@ -201,10 +203,58 @@ function setCSsByDevice(width) {
         });
         document.getElementById('player_line').width.baseVal.value = 123;
         document.getElementById('player_line_line').x2.baseVal.value = 123;
+        document.getElementById('volume').style.display = 'inline-flex';
     }
 }
 
 $("#play").on("click touchend", function() {
     alert('hello');
 });
+
+function menuButton() {
+    let text_wrapper = document.getElementById('player_wrapper');
+    let site_footer = document.getElementById('site_footer');
+    let play = document.getElementById('play');
+    let pause = document.getElementById('pause');
+    let volume = document.getElementById('volume');
+    let ask = document.getElementById('ask');
+
+    let elements = [
+        text_wrapper,
+        site_footer,
+        play,
+        pause,
+        volume,
+        ask
+    ];
+
+    let menu = document.getElementById('menu');
+    let home = document.getElementById('home');
+
+    if (menu != null) {
+        elements.forEach(element => {
+            if (element != null) {
+                element.style.display = 'block';
+            }
+        })
+        document.getElementById('volume').style.display = 'inline-flex';
+        document.getElementById('text_donda').style.display='none';
+
+        menu.id = 'home';
+        changeTextToValue(menu, 'HOME');
+    } else if (home != null) {
+        home.id = 'menu';
+        changeTextToValue(home, 'MENU');
+
+        elements.forEach(element => {
+            if (element != null) {
+                element.style.display = 'none';
+            }
+        })
+        document.getElementById('volume').style.display = 'none';
+
+        document.getElementById('text_donda').style.display='block';
+    }
+}
+
 
