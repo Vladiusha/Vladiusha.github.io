@@ -156,14 +156,6 @@ p {
     cursor: pointer;
 }
 
-/*#pause {*/
-/*    position: absolute;*/
-/*    bottom: 60%;*/
-/*}*/
-/*#pause:hover {*/
-/*    cursor: pointer;*/
-/*}*/
-
 #volume {
     display: inline-flex;
 }
@@ -206,6 +198,7 @@ p {
     margin-top: 15px;
     text-align: center;
 }
+
 
 .countdown_pc {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;

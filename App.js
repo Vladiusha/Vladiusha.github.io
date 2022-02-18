@@ -184,7 +184,7 @@ function setCSsByDevice(width) {
 
     ];
 
-    if (width < 400) {
+    if (width < 1000) {
         elements.forEach(element => {
             let class_name = element.className;
             let re = /pc/gi;
