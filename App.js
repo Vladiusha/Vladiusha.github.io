@@ -203,3 +203,8 @@ function setCSsByDevice(width) {
         document.getElementById('player_line_line').x2.baseVal.value = 123;
     }
 }
+
+$("#play").on("click touchend", function() {
+    alert('hello');
+});
+

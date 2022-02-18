@@ -21,16 +21,17 @@ body {
 #site_center {
     height: 100vh;
     position: relative;
-    z-index: 10;
     margin: 0 auto;
 }
 
 .site_center_pc {
     width: 221px;
+    z-index: 10;
 }
 
 .site_center_mobile {
     width: 500px;
+    z-index: 5;
 }
 
 
@@ -87,12 +88,6 @@ p {
 
 .player_text_mobile {
     font-size: 28px;
-}
-
-#menu {
-    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
-    color: #ABABAB;
-    font-size: 14px;
 }
 
 .player_wrapper_pc {
@@ -214,6 +209,11 @@ p {
     font-size: 20px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+#menu {
+    font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
+    color: #ABABAB;
 }
 
 .menu_pc {
