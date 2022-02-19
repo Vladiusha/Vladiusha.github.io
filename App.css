@@ -125,9 +125,9 @@ p {
     /*transform: translate(-50%, -50%);*/
     /*position: absolute;*/
     /*padding-top: calc(50vh - 100px);*/
-    position: fixed;
+    /*position: fixed;*/
     display: none;
-    bottom: 45%;
+    /*bottom: 45%;*/
 }
 
 #site_footer {
@@ -155,7 +155,8 @@ p {
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     /*margin-bottom: 30px;*/
-    height: 45vh;
+    /*height: 45vh;*/
+    height: 55vh;
     font-size: 34px;
     text-align: center;
     bottom: 0;
