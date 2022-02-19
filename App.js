@@ -211,12 +211,8 @@ function setCSsByDevice(width) {
     }
 }
 
-$("#play").on("click touchend", function() {
-    alert('hello');
-});
-
 function menuButton() {
-    alert('HEllow world');
+    alert('WORLD');
     let text_wrapper = document.getElementById('player_wrapper');
     let site_footer = document.getElementById('site_footer');
     let play = document.getElementById('play');
