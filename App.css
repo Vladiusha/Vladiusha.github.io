@@ -119,11 +119,12 @@ p {
 
 .player_wrapper_mobile {
     /*top: 45%;*/
-    bottom: 0;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    /*bottom: 0;*/
+    /*left: 50%;*/
+    /*margin-right: -50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*position: absolute;*/
+    padding-top: calc(50vh - 100px);
     display: none;
 }
 
