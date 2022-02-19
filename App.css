@@ -3,8 +3,9 @@
     height: 100vh;
 }
 body {
-    overflow-y: hidden;
-    overflow-x: hidden;
+    /*overflow-y: hidden;*/
+    /*overflow-x: hidden;*/
+    overflow: hidden;
     margin: 0px;
 }
 
@@ -19,7 +20,7 @@ body {
 }
 
 #site_center {
-
+    overflow: hidden;
 }
 
 .site_center_pc {
@@ -129,7 +130,7 @@ p {
 }
 
 #site_footer {
-
+    overflow: hidden;
 }
 
 .site_footer_pc {
