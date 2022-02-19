@@ -33,9 +33,9 @@ body {
 
 .site_center_mobile {
     height: 45vh;
-    position: relative;
+    position: fixed;
     margin: 0 auto;
-    width: 500px;
+    width: 100vw;
     z-index: 5;
 }
 

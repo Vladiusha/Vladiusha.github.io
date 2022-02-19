@@ -42,6 +42,8 @@ $(document).ready(function () {
     min_back = 4;
 
     setCssByDevice(window.outerWidth);
+
+    alert('Tut');
 });
 
 function makeSongStep() {
@@ -217,7 +219,7 @@ function setCssByDevice(width) {
 }
 
 function menuButton() {
-    alert('LIA');
+    alert('LIA2');
 
     let text_wrapper = document.getElementById('player_wrapper');
     let site_footer = document.getElementById('site_footer');
