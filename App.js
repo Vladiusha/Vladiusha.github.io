@@ -18,7 +18,7 @@
 // let PLAY_MOBILE = 'play_mobile';
 // let VOLUME_MOBILE = 'volume_mobile';
 // let ASK_MOBILE = 'ask_mobile';
-
+let WINDOW_WIDTH = 0;
 
 let BRIGHTNESS_VALUE = 0;
 let PLAYER_LINE_RECT;
@@ -41,9 +41,10 @@ $(document).ready(function () {
     sec_back = 57;
     min_back = 4;
 
+    WINDOW_WIDTH = window.outerWidth;
     setCssByDevice(window.outerWidth);
 
-    alert('Tut TUT');
+    alert('Tut TUT TU TU TU');
 });
 
 function makeSongStep() {
@@ -176,7 +177,6 @@ window.onresize = function( event ) {
 };
 
 function setCssByDevice(width) {
-    alert('LLLLLLLLLLLL');
     let elements = [
         document.getElementById('menu'),
         document.getElementById('site_center'),
@@ -204,7 +204,11 @@ function setCssByDevice(width) {
 
         document.getElementById('player_line').width.baseVal.value = 300;
         document.getElementById('player_line_line').x2.baseVal.value = 300;
-        document.getElementById('volume').style.display = 'none';
+        if (width !== WINDOW_WIDTH) {
+            document.getElementById('volume').style.display = 'none';
+            WINDOW_WIDTH = width;
+        }
+
     } else {
         elements.forEach(element => {
             if (element != null) {
@@ -215,7 +219,11 @@ function setCssByDevice(width) {
         });
         document.getElementById('player_line').width.baseVal.value = 123;
         document.getElementById('player_line_line').x2.baseVal.value = 123;
-        document.getElementById('volume').style.display = 'inline-flex';
+
+        if (width !== WINDOW_WIDTH) {
+            document.getElementById('volume').style.display = 'inline-flex';
+            WINDOW_WIDTH = width;
+        }
     }
 }
 
