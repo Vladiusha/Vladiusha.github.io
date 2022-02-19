@@ -171,7 +171,11 @@ p {
     position: absolute;
     bottom: 60%;
 }
-.play_pc:hover {
+#play:hover {
+    cursor: pointer;
+}
+
+#pause:hover {
     cursor: pointer;
 }
 

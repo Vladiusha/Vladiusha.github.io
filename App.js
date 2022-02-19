@@ -41,7 +41,7 @@ $(document).ready(function () {
     sec_back = 57;
     min_back = 4;
 
-    setCSsByDevice(window.outerWidth);
+    setCssByDevice(window.outerWidth);
 });
 
 function makeSongStep() {
@@ -96,7 +96,8 @@ function playButton() {
         document.getElementById('site_footer'),
         countdown,
         countdown_back,
-        document.getElementById('home')
+        document.getElementById('home'),
+        document.getElementById('menu'),
     ];
 
 
@@ -128,7 +129,11 @@ function playButton() {
 }
 
 function changeTextsColor(elements, color) {
-    elements.forEach(element => element.style.color = color);
+    elements.forEach(element => {
+        if (element != null) {
+            element.style.color = color;
+        }
+    });
 }
 
 function changeSVGColor(elements, color) {
@@ -165,10 +170,10 @@ function volumeUpButton() {
 }
 
 window.onresize = function( event ) {
-    setCSsByDevice(event.srcElement.outerWidth);
+    setCssByDevice(event.srcElement.outerWidth);
 };
 
-function setCSsByDevice(width) {
+function setCssByDevice(width) {
     let elements = [
         document.getElementById('menu'),
         document.getElementById('site_center'),
@@ -212,7 +217,6 @@ function setCSsByDevice(width) {
 }
 
 function menuButton() {
-    alert('HILLOU DVA');
     let text_wrapper = document.getElementById('player_wrapper');
     let site_footer = document.getElementById('site_footer');
     let play = document.getElementById('play');
@@ -255,6 +259,10 @@ function menuButton() {
         document.getElementById('volume').style.display = 'none';
 
         document.getElementById('text_donda').style.display='block';
+    }
+
+    if (home != null && document.getElementById('pause')) {
+        playButton();
     }
 }
 
