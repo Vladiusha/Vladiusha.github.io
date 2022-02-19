@@ -125,6 +125,7 @@ p {
     /*transform: translate(-50%, -50%);*/
     /*position: absolute;*/
     /*padding-top: calc(50vh - 100px);*/
+    position: fixed;
     display: none;
     bottom: 45%;
 }

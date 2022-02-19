@@ -43,7 +43,7 @@ $(document).ready(function () {
 
     setCssByDevice(window.outerWidth);
 
-    alert('Tut');
+    alert('Tut HELO');
 });
 
 function makeSongStep() {
