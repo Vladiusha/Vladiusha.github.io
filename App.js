@@ -135,19 +135,55 @@ function changeTextToValue(element, value_text) {
 }
 
 function volumeLessButton() {
+    let play = document.getElementById('play');
+    let pause = document.getElementById('pause');
+
+    if (play != null) {
+        document.getElementById('volume_less').style.color = '#e3dede';
+    } else if (pause != null) {
+        document.getElementById('volume_less').style.color = '#3a3a3a';
+    }
+
     if ((BRIGHTNESS_VALUE - 10) >= 0) {
         BRIGHTNESS_VALUE -= 10;
     }
     let backgroung_img = document.getElementById("site_area");
     backgroung_img.style.filter = `brightness(${BRIGHTNESS_VALUE*2}%)`
+
+    setTimeout(() => {
+        if (play != null) {
+            document.getElementById('volume_less').style.color = null;
+        } else if (pause != null) {
+            document.getElementById('volume_less').style.color = null;
+        }
+    }, 150);
 }
 
 function volumeUpButton() {
+    let play = document.getElementById('play');
+    let pause = document.getElementById('pause');
+
+    if (play != null) {
+        document.getElementById('volume_up').style.color = '#e3dede';
+    } else if (pause != null) {
+        document.getElementById('volume_up').style.color = '#3a3a3a';
+    }
+
+
+
     if ((BRIGHTNESS_VALUE + 10) <= 100) {
         BRIGHTNESS_VALUE += 10;
     }
     let backgroung_img = document.getElementById("site_area");
     backgroung_img.style.filter = `brightness(${BRIGHTNESS_VALUE*2}%)`
+
+    setTimeout(() => {
+        if (play != null) {
+            document.getElementById('volume_up').style.color = null;
+        } else if (pause != null) {
+            document.getElementById('volume_up').style.color = null;
+        }
+    }, 150);
 }
 
 window.onresize = function( event ) {
@@ -165,6 +201,7 @@ function setCssByDevice(width) {
         document.getElementById('countdown_back'),
         document.getElementById('site_footer'),
         document.getElementById('play'),
+        document.getElementById('pause'),
         document.getElementById('volume'),
         document.getElementById('ask'),
         document.getElementById('player_text'),
@@ -182,7 +219,11 @@ function setCssByDevice(width) {
 
         document.getElementById('player_line').width.baseVal.value = 300;
         document.getElementById('player_line_line').x2.baseVal.value = 300;
-        document.getElementById('site_footer').insertBefore(document.getElementById('player_wrapper'), document.getElementById('play'));
+        if (document.getElementById('play') != null) {
+            document.getElementById('site_footer').insertBefore(document.getElementById('player_wrapper'), document.getElementById('play'));
+        } else  if (document.getElementById('pause') != null) {
+            document.getElementById('site_footer').insertBefore(document.getElementById('player_wrapper'), document.getElementById('pause'));
+        }
     } else {
         elements.forEach(element => {
             if (element != null) {
