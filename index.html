@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ye</title>
+    <link href="./App.css" rel="stylesheet" type="text/css">
+    <script src="./lib/jquery-3.5.1.min.js"></script>
+    <script src="./lib/jquery.bubble.text.js"></script>
+    <script src="App.js"></script>
+</head>
+<body>
+    <div class="App">
+        <img src="images/ye.gif" id = "site_area">
+        <p id="menu" class="menu_pc" onclick="menuButton()">MENU</p>
+        <div id="site_center" class="site_center_pc">
+            <p id="text_donda" class="text_donda_pc">DONDA MINT SOON</p>
+            <div id="player_wrapper" class="player_wrapper_pc">
+                <p id="player_text" class="player_text_pc">Kanye West - Jail</p>
+                <div id="countdown_wrapper" class="countdown_wrapper_pc">
+                    <time id="countdown" class="countdown_pc">00:00</time>
+                    <svg id="player_line"
+                     version="1.1"
+                     baseProfile="full"
+                     width="123" height="15"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                    <line id="player_line_line" x1="0" y1="8" x2="123" y2="8" stroke="#ABABAB" fill="#ABABAB" stroke-width="2"/>
+                    <rect id="player_line_rect" x="0" y="0" width="2" height="15" stroke="#FFFFFF" fill="#ABABAB" />
+                </svg>
+                    <time id="countdown_back"class="countdown_pc">-04:57</time>
+                </div>
+            </div>
+        </div>
+        <div id="site_footer" class="site_footer_pc">
+            <p id="play" class='play_pc' onclick="playButton()">PLAY</p>
+            <div id="volume" class="volume_pc">
+                <p id="volume_text">VOLUME </p>
+                <p id="volume_less" onclick="volumeLessButton()">-</p>
+                <p id="volume_up" onclick="volumeUpButton()">+</p>
+            </div>
+            <p id="ask" class="ask_pc">ASK ME LATER</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg id="player_line"
+     version="1.1"
+     baseProfile="full"
+     width="122" height="15"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <rect width="100%" height="100%" fill="white" />
+
+    <line x1="0" y1="8" x2="122" y2="8" stroke="#ABABAB" fill="#ABABAB" stroke-width="2"/>
+    <rect x="0" y="0" width="2" height="15" stroke="#FFFFFF" fill="#ABABAB" />
+</svg>
