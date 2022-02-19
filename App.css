@@ -31,7 +31,7 @@ body {
 }
 
 .site_center_mobile {
-    height: 50vh;
+    height: 45vh;
     position: relative;
     margin: 0 auto;
     width: 500px;
@@ -118,7 +118,7 @@ p {
 }
 
 .player_wrapper_mobile {
-    top: 35%;
+    top: 45%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -148,12 +148,11 @@ p {
 .site_footer_mobile {
     width: 100vw;
     position: fixed;
-    bottom: 0;
     z-index: 5;
     font-family: "VCR OSD Mono", Helvetica, Arial, sans-serif;
     color: #ABABAB;
     /*margin-bottom: 30px;*/
-    height: 50vh;
+    height: 45vh;
     font-size: 34px;
     text-align: center;
 }

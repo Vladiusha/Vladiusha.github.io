@@ -212,7 +212,7 @@ function setCSsByDevice(width) {
 }
 
 function menuButton() {
-    alert('LLLLL');
+    alert('HILLOU');
     let text_wrapper = document.getElementById('player_wrapper');
     let site_footer = document.getElementById('site_footer');
     let play = document.getElementById('play');
