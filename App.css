@@ -127,6 +127,7 @@ p {
     /*padding-top: calc(50vh - 100px);*/
     /*position: fixed;*/
     display: none;
+    margin-bottom: 50px;
     /*bottom: 45%;*/
 }
 

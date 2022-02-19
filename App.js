@@ -176,6 +176,7 @@ window.onresize = function( event ) {
 };
 
 function setCssByDevice(width) {
+    alert('LLLLLLLLLLLL');
     let elements = [
         document.getElementById('menu'),
         document.getElementById('site_center'),
