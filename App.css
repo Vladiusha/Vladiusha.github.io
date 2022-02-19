@@ -118,13 +118,14 @@ p {
 }
 
 .player_wrapper_mobile {
-    top: 45%;
+    /*top: 45%;*/
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     position: absolute;
     /*padding-top: calc(50vh - 100px);*/
     display: none;
+    bottom: 0;
 }
 
 #site_footer {
@@ -155,6 +156,7 @@ p {
     height: 45vh;
     font-size: 34px;
     text-align: center;
+    bottom: 0;
 }
 
 /*#play {*/
