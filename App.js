@@ -129,7 +129,7 @@ function changeTextToValue(element, value_text) {
         bubbleText({
             element: element,
             newText: value_text,
-            letterSpeed: 130,
+            letterSpeed: 70,
         });
     })();
 }
