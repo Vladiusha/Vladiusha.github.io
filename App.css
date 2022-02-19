@@ -193,10 +193,10 @@ p {
 }
 
 #volume {
-    display: inline-flex;
 }
 
 .volume_pc {
+    display: inline-flex;
     position: absolute;
     bottom: 30%;
 }
