@@ -143,7 +143,7 @@ function changeTextToValue(element, value_text) {
         bubbleText({
             element: element,
             newText: value_text,
-            letterSpeed: 150,
+            letterSpeed: 130,
         });
     })();
 }
@@ -169,6 +169,7 @@ window.onresize = function( event ) {
 };
 
 function setCSsByDevice(width) {
+    console.log('START');
     let elements = [
         document.getElementById('menu'),
         document.getElementById('site_center'),
@@ -185,7 +186,8 @@ function setCSsByDevice(width) {
 
     ];
 
-    if (width < 1000) {
+    if (width < 500) {
+        console.log(`---Mobile---${width}`);
         elements.forEach(element => {
             let class_name = element.className;
             let re = /pc/gi;
@@ -196,6 +198,7 @@ function setCSsByDevice(width) {
         document.getElementById('player_line_line').x2.baseVal.value = 300;
         document.getElementById('volume').style.display = 'none';
     } else {
+        console.log(`---PC---${width}`);
         elements.forEach(element => {
             let class_name = element.className;
             let re = /mobile/gi;
@@ -205,6 +208,7 @@ function setCSsByDevice(width) {
         document.getElementById('player_line_line').x2.baseVal.value = 123;
         document.getElementById('volume').style.display = 'inline-flex';
     }
+    console.log('-----------END----------');
 }
 
 $("#play").on("click touchend", function() {
