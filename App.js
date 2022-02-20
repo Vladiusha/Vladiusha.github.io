@@ -90,7 +90,7 @@ function playButton() {
 
     if (play != null) {
         background_img.style.opacity = 1;
-        play.id = 'pause';
+        play.id = 'pause_disabled';
 
         timer(); // Запуск секундомера песни
 
@@ -99,7 +99,7 @@ function playButton() {
         changeSVGColor(svg_elements, "#FFFFFF");
     } else if (pause != null) {
         background_img.style.opacity = 0;
-        pause.id = 'play';
+        pause.id = 'play_disabled';
 
         clearTimeout(t); // Остановка секундомера паузы
 
@@ -130,6 +130,11 @@ function changeTextToValue(element, value_text) {
             element: element,
             newText: value_text,
             letterSpeed: 70,
+            callback: () => {
+                let id = element.id;
+                    let re = /_disabled/gi;
+                element.id = id.replace(re, '');
+            }
         });
     })();
 }
