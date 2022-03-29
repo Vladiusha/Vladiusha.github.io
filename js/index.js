@@ -98,7 +98,7 @@ function add_rule() {
         return false;
     }
 
-    let result = `<b>${transport_type_value} ${change_date_format(trip_date_value)}</b><br><u>${transport_type_value.substring(0, (transport_type_value.length - 2))}</u><br>${transport_number_value} ${place_departure_value} ${time_departure_value} ${place_arrival_value} ${time_arrival_value}<br>`;
+    let result = `<b>${way_type_value} ${change_date_format(trip_date_value)}</b><br><u>${transport_type_value.substring(0, (transport_type_value.length - 2))}</u><br>${transport_number_value} ${place_departure_value} ${time_departure_value} ${place_arrival_value} ${time_arrival_value}<br>`;
 
 
     let output_result = document.getElementById('output_result');
